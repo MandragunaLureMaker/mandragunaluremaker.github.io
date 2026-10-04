@@ -49,7 +49,7 @@ section { padding: 64px 0 0; }
 
 h2 { font-size: clamp(1.9rem, 7vw, 2.8rem); }
 .feats { display: grid; gap: 14px; margin-top: 28px; }
-@media (min-width: 680px) { .feats { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 680px) { .feats { grid-template-columns: repeat(3, 1fr); } }
 .feat { background: var(--bg-2); border-left: 4px solid var(--red); padding: 18px 18px 20px; }
 .feat h3 { font-size: 1.35rem; margin-bottom: 6px; }
 .feat p { color: var(--muted); font-size: 16px; }
@@ -58,6 +58,16 @@ h2 { font-size: clamp(1.9rem, 7vw, 2.8rem); }
 .handmade p.sub { margin-top: 14px; max-width: 48ch; color: var(--muted); }
 .handmade .keys { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
 .handmade .keys li { border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px; font-size: 15px; }
+
+
+.care-grid { list-style: none; counter-reset: c; padding: 0; margin: 26px 0 0; display: grid; gap: 14px; }
+@media (min-width: 680px) { .care-grid { grid-template-columns: repeat(2, 1fr); } }
+.care-grid li { counter-increment: c; background: var(--bg-2); border-left: 4px solid var(--red); padding: 16px 18px 18px 18px; }
+.care-grid li::before { content: counter(c, decimal-leading-zero); display: block; font: 700 14px "Oswald", sans-serif; color: var(--red); letter-spacing: .08em; margin-bottom: 4px; }
+.care-grid h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.care-grid p { color: var(--muted); font-size: 16px; }
+.care-note { margin-top: 18px; padding: 16px 18px; border: 1px dashed var(--line); color: var(--muted); font-size: 16px; }
+.care-note strong { color: var(--ink); }
 
 ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 26px 0 0; display: grid; gap: 16px; }
 ol.steps li { counter-increment: s; display: flex; gap: 14px; align-items: flex-start; }
@@ -97,6 +107,7 @@ footer { padding: 20px 0 28px; text-align: center; font-size: 14px; color: var(-
       <a class="btn" data-wa="Halo Mandraguna Lure, saya mau pesan Soft Frog. Boleh tahu pilihan warna, ukuran, dan harganya?" href="#">Pesan Soft Frog</a>
 
       <div class="feats" style="text-align:left">
+        <div class="feat"><h3>Latex 6–7 lapis</h3><p>Bodi lunak dan lentur, jadi hook mudah menancap ke target saat strike.</p></div>
         <div class="feat"><h3>Red eye</h3><p>Mata merah jadi ciri khas Mandraguna di setiap lure.</p></div>
         <div class="feat"><h3>Strike in silence</h3><p>Lunak dan senyap saat mendarat, supaya ikan tidak curiga.</p></div>
       </div>
@@ -109,9 +120,26 @@ footer { padding: 20px 0 28px; text-align: center; font-size: 14px; color: var(-
       <p class="sub">Setiap lure dikerjakan dengan tangan, bukan hasil cetak massal. Warna dan detail bisa kamu diskusikan langsung dengan pembuatnya.</p>
       <ul class="keys">
         <li>Buatan tangan</li>
+        <li>Body latex berlapis</li>
         <li>Bisa request warna</li>
         <li>Pesan lewat WhatsApp</li>
       </ul>
+    </div>
+  </section>
+
+  <section id="rawat">
+    <div class="wrap">
+      <h2>Cara merawat Soft Frog</h2>
+      <p class="sub" style="margin-top:14px;max-width:48ch;color:var(--muted)">Bodi dari latex berlapis. Rawat dengan benar supaya tetap lunak, lentur, dan tidak cepat getas.</p>
+      <ol class="care-grid">
+        <li><h3>Bilas dan keringkan</h3><p>Cuci dengan air tawar setelah dipakai. Keringkan luar dan dalam sampai benar-benar kering, lalu angin-anginkan di tempat teduh.</p></li>
+        <li><h3>Jauhkan dari matahari dan panas</h3><p>Sinar matahari dan panas membuat latex getas, retak, dan lengket. Jangan ditinggal di mobil atau jok motor.</p></li>
+        <li><h3>Hindari minyak dan bahan kimia</h3><p>Tabir surya, lotion anti nyamuk, bensin, dan minyak bisa merusak latex. Cuci tangan dulu sebelum memegangnya.</p></li>
+        <li><h3>Simpan sejuk, gelap, kering</h3><p>Taruh di kotak tertutup. Kalau mulai lengket, taburi bedak bayi tipis lalu tepuk lepas kelebihannya.</p></li>
+        <li><h3>Simpan dengan bentuk asli</h3><p>Jangan ditekuk, ditarik lama, atau ditindih. Pisahkan dari lure lain supaya tidak lengket atau tertular bahan kimia.</p></li>
+        <li><h3>Cek sebelum dipakai</h3><p>Periksa robekan kecil atau retak, terutama sekitar lubang hook. Ganti hook yang karat atau tumpul.</p></li>
+      </ol>
+      <p class="care-note"><strong>Bodi sudah getas atau retak?</strong> Latex yang sudah rusak tidak bisa diperbaiki. Sebaiknya diganti supaya tidak sobek saat strike.</p>
     </div>
   </section>
 
